@@ -36,7 +36,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 checkpoint = "AvataarAI/Diff-TSM-Qwen-0.5B"
 device = "cuda" # for GPU usage or "cpu" for CPU usage
 model = AutoModelForCausalLM.from_pretrained(checkpoint).to(device)
-tokenizer = AutoTokenizer.from_pretrained("Qwen2.5-0.5B-Instruct")
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
 messages = [
     {"role": "system", "content": "Please reason step by step, and put your final answer within \\boxed{{}}."},
     {"role": "user", "content": r"What is the derivative of the following function w.r.t. x: e^(2x) \sin(14x)"},
